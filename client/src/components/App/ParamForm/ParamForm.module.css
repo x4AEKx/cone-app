@@ -1,0 +1,15 @@
+.wrapper {
+  max-width: 1000px;
+  padding: 0 5px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}

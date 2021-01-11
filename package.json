@@ -1,0 +1,33 @@
+{
+  "name": "cone-app",
+  "version": "1.0.0",
+  "description": "constructor of 3D-cone",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client:install": "npm install --prefix client",
+    "client:build": "npm run build --prefix client"
+  },
+  "keywords": [
+    "three",
+    "react-three-fiber",
+    "react",
+    "redux",
+    "redux-thunk",
+    "redux-form"
+  ],
+  "author": "Dmitry '4aek' Vlasov",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.3.3",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  }
+}
