@@ -1,11 +1,23 @@
-import React, { useRef } from "react";
+import { useRef, FC } from "react";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { extend, useThree, useFrame } from "react-three-fiber";
+import { extend, useThree, useFrame, ReactThreeFiber } from "react-three-fiber";
 
 extend({ OrbitControls });
 
-const Controls = () => {
-  const orbitRef = useRef();
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      orbitControls: ReactThreeFiber.Object3DNode<OrbitControls, typeof OrbitControls>
+    }
+  }
+}
+
+type orbitRefType = {
+  current: any
+}
+
+const Controls:FC = () => {
+  const orbitRef:orbitRefType = useRef();
   const { camera, gl } = useThree();
 
   useFrame(() => {
