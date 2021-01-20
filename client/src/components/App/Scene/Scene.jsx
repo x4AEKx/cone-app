@@ -3,7 +3,7 @@ import Cone from "./Cone/Cone";
 import Controls from "./Controls/Controls";
 import GridHelper from "./GridHelper/GridHelper";
 
-const Scene = ({ points, setInitApp }) => {
+const Scene = ({ points }) => {
   return (
     <Canvas
       pixelRatio={window.devicePixelRatio}

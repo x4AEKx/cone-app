@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { getData } from "../../redux/appReducer";
 import Scene from "./Scene/Scene";
 import ParamForm from "./ParamForm/ParamForm";
-import Preloader from "./../common/Preloader/Preloader";
+import Preloader from "../common/Preloader/Preloader";
 import styles from "./App.module.css";
 
 const App = ({ getData, points, isLoading, error }) => {

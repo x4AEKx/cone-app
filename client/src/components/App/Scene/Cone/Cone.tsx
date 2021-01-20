@@ -1,20 +1,25 @@
-import React, { useMemo } from "react";
+import { useMemo, FC } from "react";
 import * as THREE from "three";
 
-const Cone = ({ points }) => {
+type PointsType = Array<number>
+type PropsType = {
+	points: Array<PointsType>
+}
+
+const Cone:FC<PropsType> = ({ points }) => {
 	debugger;
 	const newPoints = useMemo(() => points.map((p) => new THREE.Vector3(...p)), [points]);
 
 	const f32array = useMemo(
 		() =>
 			Float32Array.from(
-				new Array(newPoints.length).fill().flatMap((item, index) => newPoints[index].toArray())
+				new Array(newPoints.length).fill(1).flatMap((item, index) => newPoints[index].toArray())
 			),
 		[newPoints]
 	);
 
 	return (
-		<line position={[0, 0, 0]}>
+		<line>
 			<bufferGeometry attach="geometry">
 				<bufferAttribute attachObject={["attributes", "position"]} args={[f32array, 3]} />
 			</bufferGeometry>
