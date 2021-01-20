@@ -2,13 +2,19 @@ const SET_POINTS = "SET_POINTS";
 const SET_LOADING = "SET_LOADING";
 const SET_ERROR = "SET_ERROR";
 
-const initialState = {
+type initialStateType = {
+  points: Array<Number>,
+  isLoading: boolean,
+  error: null | string,
+}
+
+const initialState:initialStateType = {
   points: [],
   isLoading: false,
   error: null,
 };
 
-const appReducer = (state = initialState, action) => {
+const appReducer = (state = initialState, action: any):initialStateType => {
   switch (action.type) {
     case SET_POINTS: {
       return {
@@ -34,19 +40,40 @@ const appReducer = (state = initialState, action) => {
   }
 };
 
-const setError = (message) => {
+type setErrorActionType =  {
+  type: typeof SET_ERROR,
+  message: string
+}
+
+const setError = (message: string): setErrorActionType => {
   return { type: SET_ERROR, message };
 };
 
-const setPoints = (points) => {
+type setPointsActionType = {
+  type: typeof SET_POINTS,
+  points: Array<Number>
+}
+
+const setPoints = (points: Array<Number>): setPointsActionType => {
   return { type: SET_POINTS, points };
 };
 
-const setLoading = (value) => {
+type setLoadingActionType = {
+  type: typeof SET_LOADING,
+  value: boolean
+}
+
+const setLoading = (value: boolean): setLoadingActionType => {
   return { type: SET_LOADING, value };
 };
 
-export const getData = (values) => async (dispatch) => {
+type ValuesType = {
+  Radius: string
+  coneHeight: string
+  segmentsNumber: string
+}
+
+export const getData = (values: ValuesType) => async (dispatch: any) => {
   dispatch(setLoading(true));
   try {
     const response = await fetch("/api/calculation", {
