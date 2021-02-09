@@ -8,6 +8,8 @@
 + Typescript
 + React
 + Redux
++ Redux-form
++ Redux-thunk
 + Express
 
 ## Run project:
