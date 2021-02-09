@@ -1,6 +1,6 @@
 # Constructor of 3D-Cone
 
-![app img](https://cdn1.savepice.ru/uploads/2021/1/11/cd989a76e9f307c80079f9d85e052d6e-full.png)
+![Cone image](https://github.com/x4aekx/cone-app/raw/master/image/cone.png)
 
 ## Run project:
 
