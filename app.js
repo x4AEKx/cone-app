@@ -30,8 +30,6 @@ if (process.env.NODE_ENV === "production") {
 
 app.use("/api", require("./routes/calculation.routes"));
 
-const PORT = process.env.PORT || 8000;
-
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
 	console.log(`App has been started on port ${PORT}...`);
 });
