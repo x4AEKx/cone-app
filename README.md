@@ -7,7 +7,7 @@ https://cone-3d-app.herokuapp.com/
 
 ---
 
-![Cone image](https://github.com/x4aekx/cone-app/raw/master/image/cone.gif)
+![Cone image](https://github.com/x4aekx/cone-app/raw/master/image/cone.png)
 
 ---
 
