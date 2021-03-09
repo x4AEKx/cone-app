@@ -1,5 +1,4 @@
 const express = require("express");
-const config = require("config");
 const path = require("path");
 
 const app = express();
@@ -30,6 +29,10 @@ if (process.env.NODE_ENV === "production") {
 
 app.use("/api", require("./routes/calculation.routes"));
 
-app.listen(process.env.PORT, () => {
+const PORT = process.env.PORT || 8000;
+
+app.set("port", PORT)
+
+app.listen(PORT, () => {
 	console.log(`App has been started on port ${PORT}...`);
 });
