@@ -1,6 +1,15 @@
 # Constructor of 3D-Cone
 
+## Demonstration:
+
+you can see the project:
+https://cone-3d-app.herokuapp.com/
+
+---
+
 ![Cone image](https://github.com/x4aekx/cone-app/raw/master/image/cone.png)
+
+---
 
 ## Used technologies:
 
