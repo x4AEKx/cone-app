@@ -4,7 +4,7 @@ const path = require("path");
 
 const app = express();
 
-const whitelist = ['http://localhost:3000'​, 'http://localhost:8000'​, 'https://cone-app-heroku.herokuapp.com']
+const whitelist = ['http://localhost:3000'​, 'http://localhost:8000'​, 'https://cone-3d-app.herokuapp.com/']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
