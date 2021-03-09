@@ -4,7 +4,7 @@ const path = require("path");
 
 const app = express();
 
-const whitelist = ['http://localhost:3000/'​, 'http://localhost:8000/'​, 'https://cone-app-heroku.herokuapp.com/​']
+const whitelist = ['http://localhost:3000'​, 'http://localhost:8000'​, 'https://cone-app-heroku.herokuapp.com']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
 
 app.use("/api", require("./routes/calculation.routes"));
 
-const PORT = process.env.PORT || config.get("port") || 8000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
 	console.log(`App has been started on port ${PORT}...`);
